@@ -1,0 +1,656 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Fashion Retrieval — Evaluation Report</title>
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #1a1a2e; color: #e0e0e0; }
+            h1 { color: #e94560; text-align: center; }
+            h2 { color: #0f3460; background: #16213e; padding: 10px; border-radius: 8px; }
+            h3 { color: #e94560; }
+            .query-section { margin: 20px 0; padding: 15px; background: #16213e; border-radius: 12px; border-left: 4px solid #e94560; }
+            .results-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+            .result-card { background: #0f3460; border-radius: 8px; padding: 8px; text-align: center; width: 180px; }
+            .result-card img { width: 160px; height: 200px; object-fit: cover; border-radius: 6px; }
+            .score { font-weight: bold; color: #e94560; font-size: 14px; }
+            .mode-label { font-size: 12px; color: #a0a0a0; }
+            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+            th, td { padding: 10px; border: 1px solid #333; text-align: center; }
+            th { background: #0f3460; color: #e94560; }
+            .best { color: #00ff88; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <h1>🔍 Multimodal Fashion Retrieval — Evaluation Report</h1>
+    
+
+        <div class="query-section">
+            <h3>Q1: Attribute Specific</h3>
+            <p><strong>Query:</strong> "A person in a bright yellow raincoat."</p>
+        
+
+            <h4>Baseline (CLIP Only)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\011ccdc0d82e359420e5b578740d7971.jpg" alt="011ccdc0d82e359420e5b578740d7971.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2756</div>
+                    <div class="mode-label">011ccdc0d82e359420e5</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\014c44b97f844dffda594b9e00a4b3fd.jpg" alt="014c44b97f844dffda594b9e00a4b3fd.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2185</div>
+                    <div class="mode-label">014c44b97f844dffda59</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\016247873d36ee0ea830a3827107d52c.jpg" alt="016247873d36ee0ea830a3827107d52c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1922</div>
+                    <div class="mode-label">016247873d36ee0ea830</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a1940434d687a785be0acf2b0fbff3.jpg" alt="00a1940434d687a785be0acf2b0fbff3.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1788</div>
+                    <div class="mode-label">00a1940434d687a785be</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01a64310ea9205193295869fcae93f90.jpg" alt="01a64310ea9205193295869fcae93f90.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1760</div>
+                    <div class="mode-label">01a64310ea9205193295</div>
+                </div>
+                
+</div>
+
+            <h4>Hybrid (No VQA)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\011ccdc0d82e359420e5b578740d7971.jpg" alt="011ccdc0d82e359420e5b578740d7971.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.3618</div>
+                    <div class="mode-label">011ccdc0d82e359420e5</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c6f5ce934d00d6923c549671c36000.jpg" alt="01c6f5ce934d00d6923c549671c36000.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.3028</div>
+                    <div class="mode-label">01c6f5ce934d00d6923c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\016247873d36ee0ea830a3827107d52c.jpg" alt="016247873d36ee0ea830a3827107d52c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2908</div>
+                    <div class="mode-label">016247873d36ee0ea830</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a8764cff12b2e849c850f4be5608bc.jpg" alt="00a8764cff12b2e849c850f4be5608bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2886</div>
+                    <div class="mode-label">00a8764cff12b2e849c8</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" alt="01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2851</div>
+                    <div class="mode-label">01cb7fbd4a2d2c5b9aeb</div>
+                </div>
+                
+</div>
+
+            <h4>Full Pipeline</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\011ccdc0d82e359420e5b578740d7971.jpg" alt="011ccdc0d82e359420e5b578740d7971.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2352</div>
+                    <div class="mode-label">011ccdc0d82e359420e5</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c6f5ce934d00d6923c549671c36000.jpg" alt="01c6f5ce934d00d6923c549671c36000.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1968</div>
+                    <div class="mode-label">01c6f5ce934d00d6923c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\016247873d36ee0ea830a3827107d52c.jpg" alt="016247873d36ee0ea830a3827107d52c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1890</div>
+                    <div class="mode-label">016247873d36ee0ea830</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a8764cff12b2e849c850f4be5608bc.jpg" alt="00a8764cff12b2e849c850f4be5608bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1876</div>
+                    <div class="mode-label">00a8764cff12b2e849c8</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" alt="01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1853</div>
+                    <div class="mode-label">01cb7fbd4a2d2c5b9aeb</div>
+                </div>
+                
+</div>
+</div>
+
+        <div class="query-section">
+            <h3>Q2: Contextual/Place</h3>
+            <p><strong>Query:</strong> "Professional business attire inside a modern office."</p>
+        
+
+            <h4>Baseline (CLIP Only)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\017feefa35d1e5a8d27d3b93a6d96d15.jpg" alt="017feefa35d1e5a8d27d3b93a6d96d15.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2836</div>
+                    <div class="mode-label">017feefa35d1e5a8d27d</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a1940434d687a785be0acf2b0fbff3.jpg" alt="00a1940434d687a785be0acf2b0fbff3.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2449</div>
+                    <div class="mode-label">00a1940434d687a785be</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00f1db534538841931f15f2bb5cec76c.jpg" alt="00f1db534538841931f15f2bb5cec76c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2158</div>
+                    <div class="mode-label">00f1db534538841931f1</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\016247873d36ee0ea830a3827107d52c.jpg" alt="016247873d36ee0ea830a3827107d52c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2134</div>
+                    <div class="mode-label">016247873d36ee0ea830</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00faa1032cc0809974a8d2dd7b018497.jpg" alt="00faa1032cc0809974a8d2dd7b018497.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2001</div>
+                    <div class="mode-label">00faa1032cc0809974a8</div>
+                </div>
+                
+</div>
+
+            <h4>Hybrid (No VQA)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\011ccdc0d82e359420e5b578740d7971.jpg" alt="011ccdc0d82e359420e5b578740d7971.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4494</div>
+                    <div class="mode-label">011ccdc0d82e359420e5</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\003d41dd20f271d27219fe7ee6de727d.jpg" alt="003d41dd20f271d27219fe7ee6de727d.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4431</div>
+                    <div class="mode-label">003d41dd20f271d27219</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c4698117bd9b3f99bc751da8dfd96c.jpg" alt="01c4698117bd9b3f99bc751da8dfd96c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4415</div>
+                    <div class="mode-label">01c4698117bd9b3f99bc</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a325fd4dc22079095ab46330abf7be.jpg" alt="00a325fd4dc22079095ab46330abf7be.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4359</div>
+                    <div class="mode-label">00a325fd4dc22079095a</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0046f98599f05fd7233973e430d6d04d.jpg" alt="0046f98599f05fd7233973e430d6d04d.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4258</div>
+                    <div class="mode-label">0046f98599f05fd72339</div>
+                </div>
+                
+</div>
+
+            <h4>Full Pipeline</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\011ccdc0d82e359420e5b578740d7971.jpg" alt="011ccdc0d82e359420e5b578740d7971.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2921</div>
+                    <div class="mode-label">011ccdc0d82e359420e5</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\003d41dd20f271d27219fe7ee6de727d.jpg" alt="003d41dd20f271d27219fe7ee6de727d.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2880</div>
+                    <div class="mode-label">003d41dd20f271d27219</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c4698117bd9b3f99bc751da8dfd96c.jpg" alt="01c4698117bd9b3f99bc751da8dfd96c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2870</div>
+                    <div class="mode-label">01c4698117bd9b3f99bc</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a325fd4dc22079095ab46330abf7be.jpg" alt="00a325fd4dc22079095ab46330abf7be.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2833</div>
+                    <div class="mode-label">00a325fd4dc22079095a</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0046f98599f05fd7233973e430d6d04d.jpg" alt="0046f98599f05fd7233973e430d6d04d.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2768</div>
+                    <div class="mode-label">0046f98599f05fd72339</div>
+                </div>
+                
+</div>
+</div>
+
+        <div class="query-section">
+            <h3>Q3: Complex Semantic</h3>
+            <p><strong>Query:</strong> "Someone wearing a blue shirt sitting on a park bench."</p>
+        
+
+            <h4>Baseline (CLIP Only)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" alt="01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1860</div>
+                    <div class="mode-label">01cb7fbd4a2d2c5b9aeb</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0146a53e12d690914995248fb6872121.jpg" alt="0146a53e12d690914995248fb6872121.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1834</div>
+                    <div class="mode-label">0146a53e12d690914995</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\009b107156c1ee41b03c5b35a82e7232.jpg" alt="009b107156c1ee41b03c5b35a82e7232.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1784</div>
+                    <div class="mode-label">009b107156c1ee41b03c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\005b37fce3c0f641d327d95dd832f51b.jpg" alt="005b37fce3c0f641d327d95dd832f51b.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1764</div>
+                    <div class="mode-label">005b37fce3c0f641d327</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01590a6ba1c54b8addb3c6f876c53a2e.jpg" alt="01590a6ba1c54b8addb3c6f876c53a2e.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1702</div>
+                    <div class="mode-label">01590a6ba1c54b8addb3</div>
+                </div>
+                
+</div>
+
+            <h4>Hybrid (No VQA)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\005b37fce3c0f641d327d95dd832f51b.jpg" alt="005b37fce3c0f641d327d95dd832f51b.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.3481</div>
+                    <div class="mode-label">005b37fce3c0f641d327</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" alt="01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.3117</div>
+                    <div class="mode-label">01cb7fbd4a2d2c5b9aeb</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01bb382de271571e209dd10cc220c7bc.jpg" alt="01bb382de271571e209dd10cc220c7bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2543</div>
+                    <div class="mode-label">01bb382de271571e209d</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\009b107156c1ee41b03c5b35a82e7232.jpg" alt="009b107156c1ee41b03c5b35a82e7232.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2507</div>
+                    <div class="mode-label">009b107156c1ee41b03c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0146a53e12d690914995248fb6872121.jpg" alt="0146a53e12d690914995248fb6872121.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2227</div>
+                    <div class="mode-label">0146a53e12d690914995</div>
+                </div>
+                
+</div>
+
+            <h4>Full Pipeline</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\005b37fce3c0f641d327d95dd832f51b.jpg" alt="005b37fce3c0f641d327d95dd832f51b.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2263</div>
+                    <div class="mode-label">005b37fce3c0f641d327</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" alt="01cb7fbd4a2d2c5b9aebfcd3c25c74e9.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2026</div>
+                    <div class="mode-label">01cb7fbd4a2d2c5b9aeb</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01bb382de271571e209dd10cc220c7bc.jpg" alt="01bb382de271571e209dd10cc220c7bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1653</div>
+                    <div class="mode-label">01bb382de271571e209d</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\009b107156c1ee41b03c5b35a82e7232.jpg" alt="009b107156c1ee41b03c5b35a82e7232.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1629</div>
+                    <div class="mode-label">009b107156c1ee41b03c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0146a53e12d690914995248fb6872121.jpg" alt="0146a53e12d690914995248fb6872121.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1448</div>
+                    <div class="mode-label">0146a53e12d690914995</div>
+                </div>
+                
+</div>
+</div>
+
+        <div class="query-section">
+            <h3>Q4: Style Inference</h3>
+            <p><strong>Query:</strong> "Casual weekend outfit for a city walk."</p>
+        
+
+            <h4>Baseline (CLIP Only)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\014c44b97f844dffda594b9e00a4b3fd.jpg" alt="014c44b97f844dffda594b9e00a4b3fd.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2713</div>
+                    <div class="mode-label">014c44b97f844dffda59</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\016247873d36ee0ea830a3827107d52c.jpg" alt="016247873d36ee0ea830a3827107d52c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2711</div>
+                    <div class="mode-label">016247873d36ee0ea830</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0146a53e12d690914995248fb6872121.jpg" alt="0146a53e12d690914995248fb6872121.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2557</div>
+                    <div class="mode-label">0146a53e12d690914995</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c6f5ce934d00d6923c549671c36000.jpg" alt="01c6f5ce934d00d6923c549671c36000.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2445</div>
+                    <div class="mode-label">01c6f5ce934d00d6923c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\017feefa35d1e5a8d27d3b93a6d96d15.jpg" alt="017feefa35d1e5a8d27d3b93a6d96d15.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2328</div>
+                    <div class="mode-label">017feefa35d1e5a8d27d</div>
+                </div>
+                
+</div>
+
+            <h4>Hybrid (No VQA)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\011ccdc0d82e359420e5b578740d7971.jpg" alt="011ccdc0d82e359420e5b578740d7971.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4655</div>
+                    <div class="mode-label">011ccdc0d82e359420e5</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c6f5ce934d00d6923c549671c36000.jpg" alt="01c6f5ce934d00d6923c549671c36000.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4559</div>
+                    <div class="mode-label">01c6f5ce934d00d6923c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01bb382de271571e209dd10cc220c7bc.jpg" alt="01bb382de271571e209dd10cc220c7bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4437</div>
+                    <div class="mode-label">01bb382de271571e209d</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\016247873d36ee0ea830a3827107d52c.jpg" alt="016247873d36ee0ea830a3827107d52c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4243</div>
+                    <div class="mode-label">016247873d36ee0ea830</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0099bc6cd3b8c47c2d21a2877b1fa533.jpg" alt="0099bc6cd3b8c47c2d21a2877b1fa533.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4224</div>
+                    <div class="mode-label">0099bc6cd3b8c47c2d21</div>
+                </div>
+                
+</div>
+
+            <h4>Full Pipeline</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\011ccdc0d82e359420e5b578740d7971.jpg" alt="011ccdc0d82e359420e5b578740d7971.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.3026</div>
+                    <div class="mode-label">011ccdc0d82e359420e5</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c6f5ce934d00d6923c549671c36000.jpg" alt="01c6f5ce934d00d6923c549671c36000.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2964</div>
+                    <div class="mode-label">01c6f5ce934d00d6923c</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01bb382de271571e209dd10cc220c7bc.jpg" alt="01bb382de271571e209dd10cc220c7bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2884</div>
+                    <div class="mode-label">01bb382de271571e209d</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\016247873d36ee0ea830a3827107d52c.jpg" alt="016247873d36ee0ea830a3827107d52c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2758</div>
+                    <div class="mode-label">016247873d36ee0ea830</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\0099bc6cd3b8c47c2d21a2877b1fa533.jpg" alt="0099bc6cd3b8c47c2d21a2877b1fa533.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2746</div>
+                    <div class="mode-label">0099bc6cd3b8c47c2d21</div>
+                </div>
+                
+</div>
+</div>
+
+        <div class="query-section">
+            <h3>Q5: Compositional</h3>
+            <p><strong>Query:</strong> "A red tie and a white shirt in a formal setting."</p>
+        
+
+            <h4>Baseline (CLIP Only)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\004e9e21cd1aca568a8ffc77a54638ce.jpg" alt="004e9e21cd1aca568a8ffc77a54638ce.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2427</div>
+                    <div class="mode-label">004e9e21cd1aca568a8f</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01a64310ea9205193295869fcae93f90.jpg" alt="01a64310ea9205193295869fcae93f90.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2135</div>
+                    <div class="mode-label">01a64310ea9205193295</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00faa1032cc0809974a8d2dd7b018497.jpg" alt="00faa1032cc0809974a8d2dd7b018497.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1986</div>
+                    <div class="mode-label">00faa1032cc0809974a8</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c4698117bd9b3f99bc751da8dfd96c.jpg" alt="01c4698117bd9b3f99bc751da8dfd96c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1923</div>
+                    <div class="mode-label">01c4698117bd9b3f99bc</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01ba45ca87225b17fef4abda0bd329e9.jpg" alt="01ba45ca87225b17fef4abda0bd329e9.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1922</div>
+                    <div class="mode-label">01ba45ca87225b17fef4</div>
+                </div>
+                
+</div>
+
+            <h4>Hybrid (No VQA)</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\004e9e21cd1aca568a8ffc77a54638ce.jpg" alt="004e9e21cd1aca568a8ffc77a54638ce.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.4739</div>
+                    <div class="mode-label">004e9e21cd1aca568a8f</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01a64310ea9205193295869fcae93f90.jpg" alt="01a64310ea9205193295869fcae93f90.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.3051</div>
+                    <div class="mode-label">01a64310ea9205193295</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\005b37fce3c0f641d327d95dd832f51b.jpg" alt="005b37fce3c0f641d327d95dd832f51b.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2985</div>
+                    <div class="mode-label">005b37fce3c0f641d327</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c4698117bd9b3f99bc751da8dfd96c.jpg" alt="01c4698117bd9b3f99bc751da8dfd96c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2902</div>
+                    <div class="mode-label">01c4698117bd9b3f99bc</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a8764cff12b2e849c850f4be5608bc.jpg" alt="00a8764cff12b2e849c850f4be5608bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.2853</div>
+                    <div class="mode-label">00a8764cff12b2e849c8</div>
+                </div>
+                
+</div>
+
+            <h4>Full Pipeline</h4>
+            <div class="results-grid">
+            
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\004e9e21cd1aca568a8ffc77a54638ce.jpg" alt="004e9e21cd1aca568a8ffc77a54638ce.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.3080</div>
+                    <div class="mode-label">004e9e21cd1aca568a8f</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01a64310ea9205193295869fcae93f90.jpg" alt="01a64310ea9205193295869fcae93f90.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1983</div>
+                    <div class="mode-label">01a64310ea9205193295</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\005b37fce3c0f641d327d95dd832f51b.jpg" alt="005b37fce3c0f641d327d95dd832f51b.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1940</div>
+                    <div class="mode-label">005b37fce3c0f641d327</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\01c4698117bd9b3f99bc751da8dfd96c.jpg" alt="01c4698117bd9b3f99bc751da8dfd96c.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1886</div>
+                    <div class="mode-label">01c4698117bd9b3f99bc</div>
+                </div>
+                
+
+                <div class="result-card">
+                    <img src="file:///E:\Intern_Glance\data\test\00a8764cff12b2e849c850f4be5608bc.jpg" alt="00a8764cff12b2e849c850f4be5608bc.jpg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIj5JbWFnZTwvdGV4dD48L3N2Zz4='">
+                    <div class="score">0.1855</div>
+                    <div class="mode-label">00a8764cff12b2e849c8</div>
+                </div>
+                
+</div>
+</div>
+</body></html>

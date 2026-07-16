@@ -1,0 +1,39 @@
+# Data files
+data/
+*.zip
+
+# Test output files
+test_err.txt
+test_out.txt
+
+# Index files (generated at runtime)
+index/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model cache
+*.pt
+*.bin
+*.safetensors
